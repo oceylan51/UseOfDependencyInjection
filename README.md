@@ -46,4 +46,5 @@ Bu repoda, .NET Core'da kullanılan Dependency Injection (DI) yöntemlerinin (`A
 `GetSingletoNumber` endpoint'ine bir istek attığınızda ekrana bir sayı yazılacaktır. Sayfayı yenileyip defalarca yeni HTTP isteği atsanız dahi ekrana yazılan bu sayının hiç değişmediğini ve her zaman sabit kaldığını göreceksiniz.
 
 💡 **Neden?** Çünkü uygulama ayağa kalktıktan sonra ISingletonNumber ilk talep edildiğinde hafızada tek bir SingletonNumber nesnesi üretir. Sayfayı her yenilediğinizde (yeni bir HTTP isteği attığınızda), container sıfırdan bir nesne üretmek yerine hafızada hazır bekleyen o ilk ve tek nesneyi controller'a vermeye devam eder. Bu yüzden uygulama durdurulup yeniden başlatılana kadar dönen sayı birebir aynı ve sabit kalır.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
